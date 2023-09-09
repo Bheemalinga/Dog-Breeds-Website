@@ -1,6 +1,6 @@
 var breedImage = document.querySelector('#breed-image'); // <div id="breed-image"></div>
 var dropdown = document.querySelector('#dog-breeds'); // <select id="dog-breeds"></select>
-var allowSubmit = true;
+var allowSubmit = true; // variable to allow the form to be submitted
 var breed;
 
 fetch("https://dog.ceo/api/breeds/list/all") // fetching from https://dog.ceo/api/breeds/list/all
