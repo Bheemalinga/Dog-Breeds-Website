@@ -1,17 +1,17 @@
-var breedImage = document.querySelector('#breed-image');
-var dropdown = document.querySelector('#dog-breeds');
+var breedImage = document.querySelector('#breed-image'); // <div id="breed-image"></div>
+var dropdown = document.querySelector('#dog-breeds'); // <select id="dog-breeds"></select>
 var allowSubmit = true;
 var breed;
 
-fetch("https://dog.ceo/api/breeds/list/all")
-    .then(response => response.json())
-    .then(data => {
-      let dogBreeds = data.message;
-      for(let breed in dogBreeds){
-        let option=document.createElement('option');
-        option.value=breed;
-        option.textContent=breed;
-        dropdown.appendChild(option);
+fetch("https://dog.ceo/api/breeds/list/all") // fetching from https://dog.ceo/api/breeds/list/all
+    .then(response => response.json()) // converting the response to JSON
+    .then(data => { // using the data
+      let dogBreeds = data.message; // the breeds are in data.message
+      for(let breed in dogBreeds){ // looping through the breeds
+        let option=document.createElement('option'); // creating an option element
+        option.value=breed; // setting the value to the breed
+        option.textContent=breed; // setting the text content to the breed
+        dropdown.appendChild(option); // appending the option to the select
       }
     });
 
