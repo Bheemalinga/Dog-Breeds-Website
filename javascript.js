@@ -15,8 +15,8 @@ fetch("https://dog.ceo/api/breeds/list/all") // fetching from https://dog.ceo/ap
       }
     });
 
-dropdown.addEventListener("change", function () {
-  allowSubmit = true;
+dropdown.addEventListener("change", function () { // when the dropdown changes
+  allowSubmit = true; // allow the form to be submitted
 });
 
 document.querySelector("form button").addEventListener("click", function(e){
